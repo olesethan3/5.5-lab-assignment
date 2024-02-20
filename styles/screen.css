@@ -1,56 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
 
 :root{
-    --paragraphListTextSize: 22px;
+    --pageBackgroundColor: #E9E9E9;
+    --pageFont: "Inter";
+    --pageFontColor: #424242;
+    --titleFontSize: 120px;
+    --sectionTitleFontSize: 43px;
+    --paragraphFontSize: 22px;
+    --center: 400px;
+    --bulletBackgroundSize: contain;
+    --buttonBackgroundColor: #FF3F3C;
+    --buttonFontandBorderColor: #FFFFFF;
 }
 
 body {
-    background-color: #E9E9E9;
+    background-color: var(--pageBackgroundColor);
+    font-family: var(--pageFont);
     text-align: center;
-    font-family: "Inter";
-    color: #424242;
+    color: var(--pageFontColor);
 }
 
 img {
+    margin-top: -150px;
+    margin-bottom: -200px;
     width: 50%;
 }
 
-input{
-    width: 275px;
-}
-
 h1{
-    font-size: 120px;
+    font-size: var(--titleFontSize);
     margin-bottom: 0px;
+    margin-top: 45px;
 }
 
 h2{ 
-    font-size: 43px;
+    font-size: var(--sectionTitleFontSize);
 }
 
 h3{
     text-align: left;
+    margin-left: 330px;
 }
 
 p{
-    font-size: var(--paragraphListTextSize);
-    display: flex;
+    font-size: var(--paragraphFontSize);
     text-align: justify;
-    align-items: center;
+    margin-left: var(--center);
+}
+
+.details ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .details ul li{
-    font-size: var(--paragraphListTextSize);
-    list-style-type: none;
-    margin: 10px 0;
-    padding: 0 0 0 35px;
+    font-size: var(--paragraphFontSize);
+    margin: 2% 0;
+    padding: 0 0 0 50px;
+    display: flex;
+    align-items: center;
 }
 
 .details ul li.qr{
-    background: url(images/qrcode-solid.png) no-repeat center left;
+    background: url(images/qrcode-solid.svg) no-repeat;
+    background-size: var(--bulletBackgroundSize);
+    margin-left: var(--center);
 }   
 
 .details ul li.wifi{
-    background: url(images/wifi-solid.png) no-repeat center left;
-
+    background: url(images/wifi-solid.svg) no-repeat;
+    background-size: var(--bulletBackgroundSize);
+    margin-left: var(--center);
 }   
+
+.details ul li.film{
+    background: url(images/photo-film-solid.svg) no-repeat;
+    background-size: var(--bulletBackgroundSize);
+    margin-left: var(--center);
+}   
+
+.details ul li.cloud{
+    background: url(images/cloud-arrow-up-solid.svg) no-repeat;
+    background-size: var(--bulletBackgroundSize);
+    margin-left: var(--center);
+}   
+
+.emailForm input{
+    width: 295px;
+    height: 50px;
+    font-family: var(--pageFont);
+}
+
+.emailForm form{
+    border : 20px solid #E2E2E2;
+    border-radius: 5%;
+    width: fit-content;
+    margin-left: var(--center);
+}
+
+.buttonInput{
+    font-weight: bold;
+    background-color: var(--buttonBackgroundColor);
+    color: var(--buttonFontandBorderColor);
+}
+
+.buttonInput:hover {
+    font-weight: bold;
+    background-color: var(--buttonBackgroundColor);
+    color: var(--buttonFontandBorderColor);
+    border: 5px solid var(--buttonFontandBorderColor);
+}
